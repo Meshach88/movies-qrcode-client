@@ -16,7 +16,7 @@ const MoviesPage = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/movies/${token}`);
+        const response = await axios.get(`https://movies-qrcode-api.onrender.com/movies/${token}`);
         setMovies(response.data.movies);
       } catch (err) {
         setError("Invalid or expired QR Code.");

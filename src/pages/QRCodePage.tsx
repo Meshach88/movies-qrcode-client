@@ -7,7 +7,7 @@ const QRCodePage = () => {
 
     const fetchQRCode = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/movies/qrcode");
+            const response = await axios.get("https://movies-qrcode-api.onrender.com/movies/qrcode");
             setQrData(response.data);
         } catch (error) {
             console.error("Error fetching QR Code:", error);
