@@ -38,11 +38,11 @@ const MoviesPage = () => {
               key={movie.id}
               className="bg-white p-4 rounded-lg shadow-lg text-center">
               <h2 className="text-lg font-semibold mb-2">{movie.title}</h2>
-              <div className="w-2/3 m-5">
+              <div className="w-full m-5">
                 <img
                   src={movie.image}
                   alt={movie.title}
-                  className="w-full h-56 object-contain rounded-md" />
+                  className="w-full h-56 object-cover rounded-md" />
               </div>
             </div>
           ))}
