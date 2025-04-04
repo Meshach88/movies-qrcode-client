@@ -38,7 +38,7 @@ const MoviesPage = () => {
               key={movie.id}
               className="bg-white p-4 rounded-lg shadow-lg text-center">
               <h2 className="text-lg font-semibold mb-2">{movie.title}</h2>
-              <div className="w-2/3 m-5 flex flex-col justify-center items-center">
+              <div className="flex justify-center items-center">
                 <img
                   src={movie.image}
                   alt={movie.title}
