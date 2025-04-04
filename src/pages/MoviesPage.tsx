@@ -42,7 +42,7 @@ const MoviesPage = () => {
                 <img
                   src={movie.image}
                   alt={movie.title}
-                  className="w-full h-56 object-cover rounded-md" />
+                  className="w-full h-56 object-contain rounded-md" />
               </div>
             </div>
           ))}
