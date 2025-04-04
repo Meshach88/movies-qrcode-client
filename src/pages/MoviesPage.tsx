@@ -35,8 +35,10 @@ const MoviesPage = () => {
         <ul className="bg-white p-4 rounded-lg shadow-lg">
           {movies.map((movie) => (
             <li key={movie.id} className="border-b last:border-none p-2">
-              <h2>{movie.title}</h2> 
-              <img src={movie.image} alt={movie.title} />
+              <h2>{movie.title}</h2>
+              <div className="w-2/3 m-5">
+                <img src={movie.image} alt={movie.title} width={200} />
+              </div>
             </li>
           ))}
         </ul>
