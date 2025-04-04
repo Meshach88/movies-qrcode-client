@@ -27,23 +27,28 @@ const MoviesPage = () => {
   }, [token]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-2xl font-bold mb-4">Movie List</h1>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
+      <h1 className="text-3xl font-bold text-gray-800 mb-6">Movie List</h1>
       {error ? (
         <p className="text-red-500">{error}</p>
       ) : movies ? (
-        <ul className="bg-white p-4 rounded-lg shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {movies.map((movie) => (
-            <li key={movie.id} className="border-b last:border-none p-2">
-              <h2>{movie.title}</h2>
+            <div
+              key={movie.id}
+              className="bg-white p-4 rounded-lg shadow-lg text-center">
+              <h2 className="text-lg font-semibold mb-2">{movie.title}</h2>
               <div className="w-2/3 m-5">
-                <img src={movie.image} alt={movie.title} width={200} />
+                <img
+                  src={movie.image}
+                  alt={movie.title}
+                  className="w-full h-56 object-cover rounded-md" />
               </div>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       ) : (
-        <p>Loading movies...</p>
+        <p className="text-gray-600">Loading movies...</p>
       )}
     </div>
   );
